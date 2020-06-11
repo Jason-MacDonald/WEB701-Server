@@ -1,0 +1,44 @@
+##### GET USERS #####
+
+GET http://localhost:3000/api/users
+
+##### REGISTER USER #####
+
+POST http://localhost:3000/api/users/register
+Content-Type:  application/json
+
+{
+    "name": "name2",
+    "email": "email@email2",
+    "password": "password2"
+}
+
+##### LOGIN USER #####
+
+POST http://localhost:3000/api/users/login
+Content-Type:  application/json
+
+{
+    "name": "name2",
+    "email": "email@email2",
+    "password": "password2"
+}
+
+##### GET USER #####
+GET http://localhost:3000/api/users/account
+Authorization: Bearer eyJhbGciOiJIUzI1NIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6Im5hbWUyIiwiZW1haWwiOiJlbWFpbEBlbWFpbDIiLCJwYXNzd29yZCI6IiQyYiQxMCR4dWczZ05tRGx2Q1NLdmZpNzAxZjBlejJUaFlLaEpZR0kzWTNhOU1yWWY4WGtRZllLdGIyaSIsImlhdCI6MTU5MDM2NjMwMywiZXhwIjoxNTkwMzY3NzQzfQ.N9T3LlUzt_jfaBpeATYUTvGKVhVd7-Cl0N5z5qnOWEM
+
+##### POST BID #####
+
+POST http://localhost:3000/api/bids
+Content-Type:  application/json
+
+{
+    "itemID": 1,
+    "userID": 1,
+    "userEmail": "a@a.a",
+    "bid": 100
+}
+
+##### GET BIDS #####
+GET http://localhost:3000/api/bids
