@@ -40,6 +40,22 @@ router.put("/users/account/subscribe", authenticateToken, (req, res) => {
   }
 );
 
+// ##### UNSUBSCRIBE FROM PUSH NOTIFICATIONS #####
+router.put("/users/account/unsubscribe", authenticateToken, (req, res) => {
+console.log("here");
+  User.update({
+    endpoint: null,
+    expirationTime: null,
+    p256dh: null,
+    auth: null}, 
+    {where: {email: req.user.email}})
+    .then(() => {
+      res.send("Subscription Deleted");
+    })
+    .error((err) => res.send(err)); 
+  }
+);
+
 // ##### TRIGGER PUSH #####
 router.post("/users/trigger-push", (req, res) => {
   User.findAll()
