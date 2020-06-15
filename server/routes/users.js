@@ -66,8 +66,8 @@ router.post("/users/trigger-push", (req, res) => {
        if(user.endpoint != null) {
           let data = {
             "notification": {
-              "title": "Example Title",
-              "body": "This is the body"
+              "title": "NGC Update",
+              "body": "This is a message from NGC going out to all push subscribed"
             } 
           }
 
